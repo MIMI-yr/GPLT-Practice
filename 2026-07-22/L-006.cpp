@@ -4,11 +4,10 @@ int main()
 {
     long long n;
     cin>>n;
-    int maxLen=0;
-    int ansStart=0;
+    int maxlen=0,ansstart=0;
     for(int start=2;1LL*start*start<=n;start++)
     {
-        long long temp=n;
+        int temp=n;
         int now=start;
         int len=0;
         while(temp%now==0)
@@ -17,27 +16,24 @@ int main()
             now++;
             len++;
         }
-        if(len>maxLen)
+        if(len>maxlen)
         {
-            maxLen=len;
-            ansStart=start;
+            maxlen=len;
+            ansstart=start;
         }
     }
-    if(maxLen==0)
+    if(maxlen==0)
     {
         cout<<1<<endl;
-        cout<<n<<endl;
+        cout<<n;
     }
     else
     {
-        cout<<maxLen<<endl;
-        for(int i=0;i<maxLen;i++)
+        cout<<maxlen<<endl;
+        for(int i=0;i<maxlen;i++)
         {
-            if(i>0)
-            {
-                cout<<"*";
-            }
-            cout<<ansStart+i;
+            if(i==0)cout<<ansstart;
+            else cout<<"*"<<ansstart+i;
         }
     }
     return 0;
