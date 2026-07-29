@@ -4,7 +4,7 @@ struct student
 {
     string boy;//int gender;
     string girl;//strine name;
-    bool flag=false;bool used=false;
+    bool flag=false;//bool used=false;
 };
 //可以把结构体改成上面的
 int main()
