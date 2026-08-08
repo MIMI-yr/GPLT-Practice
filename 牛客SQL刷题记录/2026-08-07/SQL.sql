@@ -5,3 +5,4 @@ select device_id,gender,age,university from user_profile where not  university='
 T10
 select device_id,gender,age,university from user_profile where not age='NULL';
 T11
+select device_id,gender,age,university,gpa from user_profile where gpa>3.5 and gender='male';
