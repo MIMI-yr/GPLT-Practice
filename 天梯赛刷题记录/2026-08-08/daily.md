@@ -90,6 +90,8 @@ sort()      // 排序 默认从小到大
 reverse()   // 反转 把原来的顺序整个翻过来
 reverse(s.begin(),s.end());
 
+ans[i].resize(M[i]);因为 vector<int> 是动态数组，resize() 可以直接改变它的元素个数 把 ans[i] 这个 vector 的长度调整为 M[i]。
+
 string::npos 可以理解为 没找到
 
 ## 明日计划
