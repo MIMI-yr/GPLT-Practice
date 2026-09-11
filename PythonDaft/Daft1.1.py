@@ -52,3 +52,20 @@ print(a)
 print("'11'")
 print('"11"')
 print('\'11\'')#\放前面，解除引号效用
+
+#内容限制：只能使用中文，英文，数字（不作为开头），下划线
+name_="zhangsan"
+name_1="zhangsan"
+
+#大小写敏感
+Itheima="heima"
+itheima=666
+print(Itheima)
+print(itheima)
+
+#不可使用关键字
+Class=1
+# class=1
+
+#类名：大驼峰命名法（每个单词的首字母都大写。）
+#方法名，变量名：小驼峰命名法（第一个单词首字母小写，后面的每个单词首字母大写。）

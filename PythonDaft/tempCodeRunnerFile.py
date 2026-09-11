@@ -1,4 +1,4 @@
-
-print("'11'")
-print('"11"')
-print('\'11\'')
+Itheima="heima"
+itheima=666
+print(Itheima)
+print(itheima)
