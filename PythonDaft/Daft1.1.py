@@ -123,3 +123,94 @@ message1=f"公司:{name},股票代码:{stock_code},当前股价:{stock_price}"
 print(message1)
 message2="每日增长系数是:%.1f,经过%d天的增长后,股价达到了:%.2f"%(stock_price_daily_growth_factor,growth_days,final_price)
 print(message2)
+
+print("请告诉我你是谁？")
+name=input()
+print("我知道了，你是%s"%name)
+
+name=input("请告诉我你是谁？")
+print("我知道了，你是%s"%name)
+
+result=10>5
+print(f"10>5的结果是：{result},类型是：{type(result)}")
+
+print(1<2<3)
+print(1<3>2)
+
+if a := 3:
+    print('ok')
+
+#练习
+print("欢迎来到儿童游乐场,儿童免费,成人收费")
+age=input("请输入你的年龄:\n")
+age=int(age)
+if age>=18:
+    print("\n你已成年，游玩需要补票10元")
+else:
+    print("\n你未成年，可以免费游玩")
+print("祝你游玩愉快")
+
+grade=input("输入成绩：\n")
+grade=int(grade)
+if grade>=90:
+    print("perfect")
+elif grade>=75:
+    print("good")
+elif grade>=60:
+    print("passing")
+else:
+    print("failing")
+
+
+grade=input("输入成绩：\n")
+grade=int(grade)
+if grade>=60:
+    if grade>=90:
+        print("perfect")
+    else:
+        print("good")
+else:
+    print("failing")
+
+a=input()
+a=int(a)
+if a>10 and a<100:
+    print("ok")
+elif a<0 or a>1000:
+    print("maybe")
+else:
+    print("no")
+
+#案例：随机猜数字
+import random
+num=random.randint(1,10)
+for i in range(3):
+    cnt=input("我猜是：")
+    cnt=int(cnt)
+    if cnt>num:
+        print('big')
+    elif cnt<num:
+        print("small")
+    else:
+        print('yes')
+
+sum=0
+i=1
+while i<=100:
+    sum+=i
+    i+=1
+print(sum)
+
+i=1
+while i<=9:
+    j=1
+    while j<=i:
+        print(f"{j}*{i}={i*j}",end=' ')
+        j+=1
+    i+=1
+    print()
+
+for i in range(1,10):
+    for j in range(1,i+1):
+        print(f"{j}*{i}={i*j}",end=' ')
+    print()
