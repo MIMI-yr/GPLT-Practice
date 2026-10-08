@@ -269,3 +269,11 @@ print(name.lower())       # 全部小写
 print(name.upper())       # 全部大写
 print(name.capitalize())  # 首字母大写
 name.title()              #每个单词首字母大写
+
+#练习：有几个偶数
+num=int(input())
+cnt=0
+for i in range(1,num):
+    if(i%2==0):
+        cnt+=1
+print(f'There are {cnt} even numbers in the range from 1 to {num}')
