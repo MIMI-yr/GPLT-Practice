@@ -208,9 +208,64 @@ while i<=9:
         print(f"{j}*{i}={i*j}",end=' ')
         j+=1
     i+=1
-    print()
+    print()# print空内容，就是换行
 
 for i in range(1,10):
     for j in range(1,i+1):
         print(f"{j}*{i}={i*j}",end=' ')
     print()
+
+for i in range(1,21):
+    for j in range(1,i+1):
+        print(f"{j:>2}*{i:>2}={i*j:<3}",end=' ')
+    print()
+        #j:>2       j占2格，右对齐
+        #i:>2       i占2格，右对齐
+        #i*j:>3     结果占3格，右对齐
+        #f"{j:<2}"表示：给 j 留 2 个字符的位置，并且左对齐。
+
+name='itheima'
+for i in name:
+    print(i,end='')
+
+"""
+for循环无法定义循环条件,知道次数用for
+while循环不能遍历,知道条件用while
+"""
+
+name='itheima is a brand of itcast'
+cnt=0
+for i in name:
+    if(i=='a'):
+        cnt+=1
+print(f"{name}中共含有：{cnt}个字母a")
+
+#plus:
+name="I love China"
+name=name.lower()
+for x in range(97,123):
+    cnt=0
+    for i in name:
+        if(ord(i)==x):
+            #ord()：字符转 ASCII 对应的数字。
+            #print(ord('a'))  # 97
+            cnt+=1
+    if(cnt>0):
+        print(f"{chr(x)}:{cnt}")
+        #chr()：数字转对应字符。
+        #print(chr(97))   # a
+#语法1   range(num) 获得数字序列
+for i in range(5):
+    print(i,end=' ')
+#语法2 range(num1,num2)
+for i in range(1,10):
+    print(i,end='  ')
+#语法3 range(num1,num2,step)  有步长
+for i in range(1,10,2):
+    print(i,end='  ')
+
+name="hello world"
+print(name.lower())       # 全部小写
+print(name.upper())       # 全部大写
+print(name.capitalize())  # 首字母大写
+name.title()              #每个单词首字母大写
