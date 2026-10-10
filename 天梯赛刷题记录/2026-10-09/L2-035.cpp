@@ -16,9 +16,12 @@ int main()
         cin>>post[i];
     }
     dfs(1);
+    int cnt=0;
     for(int i=1;i<=n;i++)
     {
-        cout<<tree[i]<<" ";
+        if(cnt)cout<<" ";
+        cout<<tree[i];
+        cnt++;
     }
     return 0;
 }
