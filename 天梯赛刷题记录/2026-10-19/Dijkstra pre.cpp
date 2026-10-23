@@ -8,7 +8,7 @@ int main()
     vector<int> dist(n,INF);
     dist[0]=0;
     vector<bool> visited(n,false);
-    vector<int> pre(n,-1);
+    vector<int> pre(n,-1);//记路线
     vector<vector<int>> graph(n,vector<int>(n,INF));
     for(int i=0;i<m;i++)
     {

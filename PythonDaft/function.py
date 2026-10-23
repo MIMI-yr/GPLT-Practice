@@ -21,3 +21,46 @@ def say_hi(i):
     print(f' {i}, Hello World!')
 for i in range(5):
     say_hi(i+1)
+
+
+def addOne(a):
+    print(a)
+    a+=1
+    print(a)
+
+def modify(v):
+    v[0]=v[0]+1
+a=3
+b=[2]
+addOne(a)
+print(a)
+modify(b)
+print(b)
+
+def demo(newitem,old_list=[]):
+    old_list.append(newitem)
+    return old_list
+print(demo('5',[1,2,3,4]))
+print(demo('aaa',['a','b']))
+print(demo('a'))
+print(demo('b'))
+
+def demo(newitem,old_list=None):
+    if old_list is None:
+        old_list=[]
+    new_list=old_list[:]
+    new_list.append(newitem)
+    return new_list
+print(demo('5',[1,2,3,4]))
+print(demo('aaa',['a','b']))
+print(demo('a'))
+print(demo('b'))
+
+# def demo(*p):
+#     print(p)
+# demo(name='amelia',age=12)
+
+def demo(a,b,c):
+    print(a+b+c)
+dic={'a':97,'b':98,'c':99}
+demo(*dic.item())
